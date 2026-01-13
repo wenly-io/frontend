@@ -1,6 +1,6 @@
 # Wenly
 
-Your friendly WhatsApp booking assistant! Wenly helps you manage and organize bookings effortlessly through WhatsApp.
+<!-- Your friendly WhatsApp booking assistant! Wenly helps you manage and organize bookings effortlessly through WhatsApp.gi -->
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
