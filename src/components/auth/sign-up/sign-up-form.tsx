@@ -19,6 +19,7 @@ import {
 } from '@/components/ui/form';
 import { GoogleIcon } from '@/components/icons';
 
+// Validation schema for sign-up form
 export const createUserSchema = z
   .object({
     fullName: z.string().min(1, 'Please enter your full name'),
@@ -70,7 +71,7 @@ const SignUpForm = () => {
                 <FormItem>
                   <FormLabel>Full Name</FormLabel>
                   <FormControl>
-                    <div className="focus-within:border-ring focus-within:ring-ring/50 focus-within-ring-[3px] flex items-center rounded-md border pl-4 outline-none">
+                    <div className="focus-within:border-ring focus-within:ring-ring/50 flex items-center rounded-md border pl-4 outline-none focus-within:ring-[3px]">
                       <UserRound
                         size={14}
                         className="text-muted-foreground shrink-0"
@@ -96,7 +97,7 @@ const SignUpForm = () => {
                 <FormItem>
                   <FormLabel>Email</FormLabel>
                   <FormControl>
-                    <div className="focus-within:border-ring focus-within:ring-ring/50 focus-within-ring-[3px] flex items-center rounded-md border pl-4 outline-none">
+                    <div className="focus-within:border-ring focus-within:ring-ring/50 flex items-center rounded-md border pl-4 outline-none focus-within:ring-[3px]">
                       <Mail
                         size={14}
                         className="text-muted-foreground shrink-0"
@@ -121,7 +122,7 @@ const SignUpForm = () => {
                 <FormItem>
                   <FormLabel>Password</FormLabel>
                   <FormControl>
-                    <div className="focus-within:border-ring focus-within:ring-ring/50 focus-within-ring-[3px] flex items-center rounded-md border pl-4 outline-none">
+                    <div className="focus-within:border-ring focus-within:ring-ring/50 flex items-center rounded-md border pl-4 outline-none focus-within:ring-[3px]">
                       <Lock
                         size={14}
                         className="text-muted-foreground shrink-0"
@@ -150,7 +151,7 @@ const SignUpForm = () => {
                 <FormItem>
                   <FormLabel>Confirm Password</FormLabel>
                   <FormControl>
-                    <div className="focus-within:border-ring focus-within:ring-ring/50 focus-within-ring-[3px] flex items-center rounded-md border pl-4 outline-none">
+                    <div className="focus-within:border-ring focus-within:ring-ring/50 flex items-center rounded-md border pl-4 outline-none focus-within:ring-[3px]">
                       <Lock
                         size={14}
                         className="text-muted-foreground shrink-0"
@@ -186,9 +187,12 @@ const SignUpForm = () => {
               Continue with Google
             </Button>
 
-            <p className="text-muted-foreground text-sm">
+            <p className="text-muted-foreground text-center text-sm">
               Already have an account?{' '}
-              <Link href="/login" className="font-medium text-black">
+              <Link
+                href="/login"
+                className="hover:text-primary/80 font-medium text-black transition-colors"
+              >
                 Login
               </Link>
             </p>

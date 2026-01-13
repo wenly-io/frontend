@@ -1,21 +1,21 @@
 import type { Metadata } from 'next';
 import Image from 'next/image';
 
-import SignUpForm from '@/components/auth/sign-up/sign-up-form';
+import LoginForm from '@/components/auth/login/login-form';
 import AuthLayout from '@/components/auth/auth-layout';
 
 export const metadata: Metadata = {
-  title: 'Sign Up | Wenly',
+  title: 'Login | Wenly',
   description:
-    'Create your Wenly account and start managing bookings through WhatsApp. Sign up in minutes to get started.',
+    'Login to your Wenly account and start managing bookings through WhatsApp.',
 };
 
-const SignUpPage = () => {
+const LoginPage = () => {
   return (
     <AuthLayout>
       <div className="flex flex-col items-center gap-6">
         <Image
-          src="./svgs/wenly-logo.svg"
+          src="/svgs/wenly-logo.svg"
           alt="Wenly Logo"
           width={60}
           height={60}
@@ -23,17 +23,17 @@ const SignUpPage = () => {
 
         <div className="flex flex-col items-center">
           <h1 className="mb-1 text-center text-2xl font-semibold sm:mb-0.5 sm:text-3xl">
-            Create Wenly Account
+            Login to Wenly
           </h1>
           <p className="text-muted-foreground max-w-77.25 text-center text-sm">
-            Fill in your information or authenticate using provided channels
+            Welcome back, login to continue
           </p>
         </div>
       </div>
 
-      <SignUpForm />
+      <LoginForm />
     </AuthLayout>
   );
 };
 
-export default SignUpPage;
+export default LoginPage;
