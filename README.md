@@ -26,9 +26,9 @@ pnpm install
 
 ### Run the Development Server
 
-```bash
+````bash
 pnpm dev
-```
+```gi
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
@@ -70,3 +70,4 @@ Simply connect your GitHub repository to Vercel, and it will automatically detec
 ## License
 
 This project is part of the Wenly organization.
+````
