@@ -1,9 +1,9 @@
-import type { Metadata } from 'next';
 import Image from 'next/image';
+import type { Metadata } from 'next';
 import { UserButton } from '@clerk/nextjs';
 
-import { Button } from '@/components/ui/button';
 import { SyncArrowIcon } from '@/components/icons';
+import SyncGoogleCalendarButton from '@/components/buttons/sync-google-calendar-button';
 
 export const metadata: Metadata = {
   title: 'Sync Google Calendar',
@@ -96,9 +96,7 @@ const ConnectGoogleCalendarPage = () => {
               />
             </div>
 
-            <Button size="lg" className="w-full">
-              Allow Synchronization
-            </Button>
+            <SyncGoogleCalendarButton />
           </div>
         </div>
       </main>
