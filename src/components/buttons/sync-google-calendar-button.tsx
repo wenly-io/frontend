@@ -14,7 +14,7 @@ const SyncGoogleCalendarButton = () => {
     const logToken = async () => {
       if (!isSignedIn) return;
 
-      const token = await getToken();
+      const token = await getToken({ template: 'backend' });
       console.log("USER'S TOKEN:", token);
     };
 
