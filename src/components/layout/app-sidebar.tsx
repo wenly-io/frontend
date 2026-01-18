@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { UserButton } from '@clerk/nextjs';
-import { CalendarDays, Clock, MoveUpRight } from 'lucide-react';
+import { CalendarDays, Clock } from 'lucide-react';
 
 import { cn } from '@/lib/utils';
 import {
@@ -19,8 +19,8 @@ import {
   SidebarMenuItem,
   useSidebar,
 } from '@/components/ui/sidebar';
-import { SwirlIcon, WenlyLogoIcon, WhatsAppIcon } from '../icons';
-import { Button } from '../ui/button';
+
+import WhatsAppCard from './whatsapp-card';
 
 const items = [
   {
@@ -66,29 +66,7 @@ const AppSidebar = () => {
         <SidebarGroup>
           <SidebarGroupContent>
             <SidebarMenu>
-              {state === 'expanded' && (
-                <div className="rounded-lg bg-linear-[108deg,#FF6A00_-28.15%,#AD33CF_96.5%] p-6">
-                  <div className="mb-2.5 flex items-center gap-1">
-                    <WhatsAppIcon />
-                    <SwirlIcon />
-                    <WenlyLogoIcon />
-                  </div>
-
-                  <div className="mb-3">
-                    <h2 className="mb-2 text-lg leading-5.5 font-semibold text-white">
-                      Connect your WhatsApp
-                    </h2>
-                    <p className="text-xs text-[#FFFFFFB2]">
-                      Synchronize your Business WhatsApp for the best
-                      experience, click connect to begin.
-                    </p>
-                  </div>
-
-                  <Button>
-                    Connect WhatsApp <MoveUpRight />
-                  </Button>
-                </div>
-              )}
+              {state === 'expanded' && <WhatsAppCard />}
 
               {items.map((item, index) => (
                 <SidebarMenuItem key={index}>
