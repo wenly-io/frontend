@@ -1,4 +1,5 @@
 import type { Metadata } from 'next';
+import BookingsPage from '@/components/bookings/bookings-page';
 
 export const metadata: Metadata = {
   title: 'Your Schedule',
@@ -6,8 +7,8 @@ export const metadata: Metadata = {
     'View and manage all your appointments and bookings in one place.',
 };
 
-const BookingsPage = () => {
-  return <div>BookingsPage</div>;
+const BookingsRoute = () => {
+  return <BookingsPage />;
 };
 
-export default BookingsPage;
+export default BookingsRoute;
