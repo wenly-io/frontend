@@ -3,6 +3,7 @@ import { clerkMiddleware, createRouteMatcher } from '@clerk/nextjs/server';
 const isProtectedRoute = createRouteMatcher([
   '/connect-google-calendar(.*)',
   '/bookings(.*)',
+  '/availability(.*)',
 ]);
 
 export default clerkMiddleware(async (auth, req) => {
